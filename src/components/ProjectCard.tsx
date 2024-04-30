@@ -94,7 +94,7 @@ const ProjectCard = ({
             <p>{description}</p>
           </div>
           <div className="flex items-center justify-start gap-3 my-2">
-            {techStack.map((tech, index) => {
+            {techStack.map((tech) => {
               const techDetails = techStackDetails.find((details) =>
                 details.name.toLowerCase().includes(tech.toLowerCase())
               );
