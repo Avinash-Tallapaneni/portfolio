@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply overflow-x-hidden bg-firefly text-onahau dark:bg-satinLinen dark:text-burntSienna ;
+}
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-firefly;
+}
+/* border: 3px solid var(--navy) */
+
+::-webkit-scrollbar-thumb {
+  @apply border-2 bg-onahau/50 border-firefly bg-clip-padding;
+}
+
+::-webkit-scrollbar-button:decrement {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid rgba(204, 214, 246, 0.5);
+}
+
+::-webkit-scrollbar-button:increment {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid rgba(204, 214, 246, 0.5);
+}
+
+::selection {
+  background-color: rgba(48, 191, 179, 0.1);
+}
+
+/* .Typewriter {
+  display: flex;
+  align-items: center;
+} */
