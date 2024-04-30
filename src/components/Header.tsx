@@ -6,7 +6,7 @@ import Resume from "../assets/Avinash_Tallapaneni_Frontend_Resume.pdf";
 import Headroom from "react-headroom";
 import Sun from "../assets/sun.svg";
 import Moon from "../assets/moon.svg";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Header = ({ prevScrollPos }: { prevScrollPos: number }) => {
   const shouldShowNavbar = prevScrollPos > 0;
