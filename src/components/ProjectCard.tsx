@@ -13,45 +13,43 @@ const ProjectCard = ({
 
   return (
     <div
-      className="z-30 flex-grow p-2 text-white rounded-md select-none shadow-card project bg-darkNavy/50 ring-2 ring-border"
+      className="z-30 flex-grow p-2 text-white rounded-md select-none shadow-card project bg-firefly/50 ring-2 ring-border"
       data-aos="fade-up"
       data-aos-easing="linear"
       data-aos-delay={200 + 100 * (index + 1)}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <a
         href={url}
         target="_blank"
         className="flex flex-col items-center justify-between h-full gap-2"
       >
-        <div
-          className="flex items-center justify-between w-full gap-4 "
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
+        <div className="flex items-center justify-between w-full gap-4 ">
           <div className="flex items-center justify-between gap-2 max-w-12">
             <div
               className={` w-2 h-2 rounded-full ${
-                isHovered ? "bg-red-400" : "bg-blue/50"
+                isHovered ? "bg-red-400" : "bg-turquoise/50"
               }`}
             ></div>
             <div
               className={` w-2 h-2 rounded-full ${
-                isHovered ? "bg-yellow-400" : "bg-blue/50"
+                isHovered ? "bg-yellow-400" : "bg-turquoise/50"
               }`}
             ></div>
             <div
               className={` w-2 h-2 rounded-full ${
-                isHovered ? "bg-green-400" : "bg-blue/50"
+                isHovered ? "bg-green-400" : "bg-turquoise/50"
               }`}
             ></div>
           </div>
-          <div className="flex items-center justify-center flex-1 px-4 py-1 text-sm rounded-md text-nowrap bg-blue/10">
+          <div className="flex items-center justify-center flex-1 px-4 py-1 text-sm rounded-md text-nowrap bg-turquoise/10">
             <span>{url}</span>
           </div>
 
           <div className="flex items-center justify-end ">
             <svg
-              className={` ${isHovered ? "text-blue" : "text-aliceBlue/50"}`}
+              className={` ${isHovered ? "text-turquoise" : " text-onahau"}`}
               width="18"
               height="18"
               viewBox="0 0 18 18"
@@ -77,7 +75,7 @@ const ProjectCard = ({
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="text-xl text-blue/80">
+          <h3 className="text-xl text-turquoise/80">
             {title.split(":").map((titleSplit, index) => {
               return (
                 <>
@@ -90,7 +88,7 @@ const ProjectCard = ({
               );
             })}{" "}
           </h3>
-          <div className="text-sm text-aliceBlue">
+          <div className="text-sm text-onahau">
             <p>{description}</p>
           </div>
           <div className="flex items-center justify-start gap-3 my-2">
@@ -105,12 +103,15 @@ const ProjectCard = ({
                       key={techDetails.name}
                       src={techDetails.image.src}
                       alt={techDetails.image.alt}
-                      className="object-cover w-6 h-6 rounded-md"
+                      className="object-cover w-8 h-8 p-1 rounded-md ring-1 ring-turquoise/50 "
                     />
 
-                    <div className="absolute flex flex-col mb-4 -translate-x-1/2 rounded-md opacity-0 group-hover:opacity-100 bg-blue hue-rotate-15 bottom-full left-1/2 w-52 ">
-                      <p className="px-4 py-2 text-sm">{techDetails.description}</p>
-                      <span className="absolute w-6 h-6 transform rotate-45 -translate-x-1/2 bg-blue -z-10 left-1/2 -bottom-2"></span>
+                    <div className="absolute flex flex-col px-4 py-2 mb-4 font-semibold scale-0 -translate-x-1/2 rounded-md opacity-0 group-hover:scale-100 group-hover:opacity-100 bg-turquoise text-firefly bottom-full left-1/2 w-52 ">
+                      <span className="text-lg">{techDetails.name}</span>
+                      <span className="text-sm font-semibold ">
+                        {techDetails.description}
+                      </span>
+                      <span className="absolute w-6 h-6 transform rotate-45 -translate-x-1/2 bg-turquoise -z-10 left-1/2 -bottom-1"></span>
                     </div>
                   </div>
                 );

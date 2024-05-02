@@ -8,7 +8,7 @@ import Typewriter from "typewriter-effect";
 const Hero = () => {
   return (
     <main className="flex-grow w-full h-screen pt-10 select-none text-onahau dark:text-burntSienna ">
-      <div className="flex flex-col justify-center h-[85%] gap-4 mx-auto lg:max-w-7xl md:max-w-4xl sm:px-20 md:p-0 items-left ">
+      <div className="flex flex-col justify-start lg:pt-6 h-[85%] gap-4 mx-auto lg:max-w-7xl md:max-w-4xl sm:px-20 md:p-0 items-left ">
         <h1
           className="text-2xl text-left text-nowrap"
           data-aos="fade-up"
@@ -19,19 +19,24 @@ const Hero = () => {
         </h1>
         <div className="font-Dancing-Script">
           <h2
-            className="w-full lg:text-6xl md:text-5xl sm:text-3xl whitespace-nowrap "
+            className="flex items-center w-full lg:text-6xl md:text-5xl sm:text-3xl whitespace-nowrap"
             data-aos="fade-up"
             data-aos-easing="linear"
             data-aos-delay="750"
           >
             <span> I'm </span>
-            <span className="mx-4 lg:text-8xl md:text-7xl sm:text-4xl text-nowrap text-turquoise dark:text-burntSienna">
+            <span className="relative mx-4 lg:text-8xl md:text-7xl sm:text-4xl text-nowrap text-turquoise dark:text-burntSienna">
               {siteConfig.hero.name}
+              <img
+                src={Arrow}
+                className=" absolute scale-y-[1] rotate-[70deg] top-8 -right-40 w-52 pointer-events-none "
+                alt="Arrow background svg"
+              ></img>
             </span>
           </h2>
         </div>
         <div
-          className="flex items-end justify-between gap-1 px-4 py-2 mt-2 text-2xl rounded-md shadow-typeWriter bg-gradient-to-b from-turquoise/5 to-turquoise/10 bg-onahau/5 w-fit text-turquoise "
+          className="flex items-end justify-between gap-1 px-4 py-2 mt-2 text-2xl rounded-md shadow-typeWriter bg-gradient-to-b from-turquoise/5 to-turquoise/10 bg-onahau/5 w-fit text-turquoise dark:from-burntSienna/5 dark:to-burntSienna/10 dark:bg-onahau/5 dark:text-burntSienna"
           data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-delay="1000"
@@ -52,7 +57,7 @@ const Hero = () => {
         </div>
         <div className="my-2">
           <p
-            className="max-w-2xl text-lg text-aliceBlue/80 font-Lumanosimo"
+            className="max-w-2xl text-lg text-onahau/80 dark:text-burntSienna/80 font-Lumanosimo"
             data-aos="fade-up"
             data-aos-easing="linear"
             data-aos-delay="1250"
@@ -62,7 +67,7 @@ const Hero = () => {
         </div>
 
         <div
-          className="relative px-4 py-2 mt-6 font-bold rounded-md cursor-pointer ring-1 ring-blue text-blue text-nowrap w-fit hover:bg-blue/15"
+          className="relative px-4 py-2 mt-4 font-bold rounded-md cursor-pointer text-nowrap w-fit ring-1 ring-turquoise text-turquoise hover:bg-turquoise/15 dark:ring-burntSienna dark:text-burntSienna dark:hover:bg-burntSienna/15"
           data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-delay="1500"
@@ -80,11 +85,11 @@ const Hero = () => {
           className="absolute top-0 left-0 w-full h-screen scale-x-[-1] pointer-events-none "
           alt="Hero background svg"
         ></img>
-        <img
+        {/* <img
           src={Arrow}
           className="absolute right-60 top-52 scale-y-[1] rotate-[70deg] w-52 pointer-events-none "
           alt="Arrow background svg"
-        ></img>
+        ></img> */}
       </div>
     </main>
   );

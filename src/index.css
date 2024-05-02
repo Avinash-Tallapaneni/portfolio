@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply overflow-x-hidden bg-firefly text-onahau dark:bg-satinLinen dark:text-burntSienna ;
+  @apply overflow-x-hidden transition-all duration-500 bg-firefly text-onahau dark:bg-satinLinen dark:text-burntSienna;
 }
 
 ::-webkit-scrollbar {
@@ -39,3 +39,19 @@ body {
   display: flex;
   align-items: center;
 } */
+
+.techStackDetails:hover {
+  scale: 1.25;
+  margin: -2rem 0.5rem 0 0.5rem;
+}
+
+.techStackDetails:hover + .techStackDetails,
+.techStackDetails:has(+ .techStackDetails:hover) {
+  scale: 1.15;
+  margin: -1rem 0.25rem 0 0.25rem;
+}
+
+.techStackDetails:hover + .techStackDetails > span,
+.techStackDetails:has(+ .techStackDetails:hover) > span {
+  @apply text-[10px] -top-[2rem] scale-100;
+}

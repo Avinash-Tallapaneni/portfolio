@@ -120,7 +120,7 @@ export const techStackDetails: TechStack[] = [
   {
     name: "Stripe",
     image: {
-      src: "../src/assets/stripe.png",
+      src: "../src/assets/stripe.svg",
       alt: "Stripe Logo",
     },
     description: "Stripe is a payment processing platform",
