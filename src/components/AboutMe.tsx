@@ -73,7 +73,7 @@ const AboutMe = () => {
         <div className="rounded-md overflow-hidden   w-[25rem] ">
           <div className="relative w-full h-full">
             <img
-              src="../../public/assets/me_bgRemoved.png"
+              src="/assets/me_bgRemoved.png"
               alt=""
               className="object-contain w-full h-full pointer-events-none"
             />

@@ -1,7 +1,7 @@
 import { siteConfig } from "../data/site-config";
-import HeroBackground from "../../public/assets/square-lines.svg";
-import Arrow from "../../public/assets/arrow.svg";
-import ButtonFan from "../../public/assets/buttonfan.svg";
+import HeroBackground from "/assets/square-lines.svg";
+import Arrow from "/assets/arrow.svg";
+import ButtonFan from "/assets/buttonfan.svg";
 
 import Typewriter from "typewriter-effect";
 
