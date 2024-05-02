@@ -23,7 +23,6 @@ const Header = ({ prevScrollPos }: { prevScrollPos: number }) => {
     }
   };
 
-
   return (
     <Headroom
       className={` flex items-center justify-center select-none
@@ -33,7 +32,7 @@ const Header = ({ prevScrollPos }: { prevScrollPos: number }) => {
         margin: "auto",
         // padding: "1rem",
         backgroundColor: theme === "dark" ? "#091B28" : "#EAE7DC",
-        boxShadow: shouldShowNavbar 
+        boxShadow: shouldShowNavbar
           ? "0 1px 40px -15px  rgba(143, 215, 188, 0.3)"
           : "",
         transition: "all .5s ease-in-out",
