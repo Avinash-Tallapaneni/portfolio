@@ -1,5 +1,4 @@
 import { techStackDetails } from "../data/site-config";
-import StackMarquee from "./StackMarquee";
 
 const AboutMe = () => {
   return (
@@ -83,7 +82,6 @@ const AboutMe = () => {
         </div>
       </div>
 
-      <div className="flex items-center ">{/* <StackMarquee /> */}</div>
     </section>
   );
 };
