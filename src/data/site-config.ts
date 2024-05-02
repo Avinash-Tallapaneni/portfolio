@@ -44,7 +44,7 @@ export const techStackDetails: TechStack[] = [
   {
     name: "Next.js",
     image: {
-      src: "../../public//assets/nextjs.svg",
+      src: "../../public/assets/nextjs.svg",
       alt: "Next.js Logo",
     },
     description: "Next.js is a react framework for building web apps",
@@ -52,7 +52,7 @@ export const techStackDetails: TechStack[] = [
   {
     name: "Tailwind CSS",
     image: {
-      src: "../../public//assets/tailwind.svg",
+      src: "../../public/assets/tailwind.svg",
       alt: "Tailwind CSS Logo",
     },
     description:
@@ -61,7 +61,7 @@ export const techStackDetails: TechStack[] = [
   {
     name: "React",
     image: {
-      src: "../../public//assets/react.svg",
+      src: "../../public/assets/react.svg",
       alt: "React Logo",
     },
     description: "React is a JavaScript library for building user interfaces",
@@ -69,7 +69,7 @@ export const techStackDetails: TechStack[] = [
   {
     name: "Typescript",
     image: {
-      src: "../../public//assets/typescript.svg",
+      src: "../../public/assets/typescript.svg",
       alt: "Typescript Logo",
     },
     description: "Typescript is a JavaScript type-checking language",
@@ -77,7 +77,7 @@ export const techStackDetails: TechStack[] = [
   {
     name: "Node.js",
     image: {
-      src: "../../public//assets/node.svg",
+      src: "../../public/assets/node.svg",
       alt: "Node.js Logo",
     },
     description: "Node.js is a JavaScript runtime for the UNIX-like system",
@@ -85,7 +85,7 @@ export const techStackDetails: TechStack[] = [
   {
     name: "MongoDB",
     image: {
-      src: "../../public//assets/mongo.svg",
+      src: "../../public/assets/mongo.svg",
       alt: "Mongodb Logo",
     },
     description: "MongoDB is a powerful NoSQL database",
@@ -93,7 +93,7 @@ export const techStackDetails: TechStack[] = [
   {
     name: "Prisma",
     image: {
-      src: "../../public//assets/prisma.svg",
+      src: "../../public/assets/prisma.svg",
       alt: "Prisma Logo",
     },
     description:
@@ -102,7 +102,7 @@ export const techStackDetails: TechStack[] = [
   {
     name: "Framer",
     image: {
-      src: "../../public//assets/framer.svg",
+      src: "../../public/assets/framer.svg",
       alt: "Framer Logo",
     },
     description:
@@ -111,7 +111,7 @@ export const techStackDetails: TechStack[] = [
   {
     name: "Figma",
     image: {
-      src: "../../public//assets/figma.svg",
+      src: "../../public/assets/figma.svg",
       alt: "Figma Logo",
     },
     description:
@@ -120,7 +120,7 @@ export const techStackDetails: TechStack[] = [
   {
     name: "Stripe",
     image: {
-      src: "../../public//assets/stripe.svg",
+      src: "../../public/assets/stripe.svg",
       alt: "Stripe Logo",
     },
     description: "Stripe is a payment processing platform",
@@ -129,7 +129,7 @@ export const techStackDetails: TechStack[] = [
 
 export const siteConfig: Siteconfig = {
   logo: {
-    src: "../../public//assets/talavin.svg",
+    src: "../../public/assets/talavin.svg",
     alt: "Talavin Logo",
   },
   headerNavLinks: [
@@ -157,7 +157,7 @@ export const siteConfig: Siteconfig = {
   services: [
     {
       image: {
-        src: "../../public//assets/frontend.svg",
+        src: "../../public/assets/frontend.svg",
         alt: "Front-End Development Image",
       },
       title: "Front-End Development",
@@ -166,7 +166,7 @@ export const siteConfig: Siteconfig = {
     },
     {
       image: {
-        src: "../../public//assets/database.svg",
+        src: "../../public/assets/database.svg",
         alt: "Back-End Development Image",
       },
       title: "Back-End Development",
@@ -175,7 +175,7 @@ export const siteConfig: Siteconfig = {
     },
     {
       image: {
-        src: "../../public//assets/webdesign.svg",
+        src: "../../public/assets/webdesign.svg",
         alt: "Web Design Image",
       },
       title: "Web Design",
@@ -188,7 +188,7 @@ export const siteConfig: Siteconfig = {
     {
       url: "https://festivus.vercel.app/",
       image: {
-        src: "../../public//assets/mountain.avif",
+        src: "../../public/assets/mountain.avif",
         alt: "Festivus Image",
       },
       title: "Festivus: Your Ultimate Event Experience Platform",
@@ -199,7 +199,7 @@ export const siteConfig: Siteconfig = {
     {
       url: "https://weather-warden.netlify.app/",
       image: {
-        src: "../../public//assets/mountain.avif",
+        src: "../../public/assets/mountain.avif",
         alt: "Weather Warden Image",
       },
       title: "Weather Warden: Your Personal Weather Companion",
