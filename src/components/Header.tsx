@@ -1,11 +1,11 @@
 import { siteConfig } from "../data/site-config";
 import "aos/dist/aos.css";
 
-import Resume from "../assets/Avinash_Tallapaneni_Frontend_Resume.pdf";
+import Resume from "../../public/assets/Avinash_Tallapaneni_Frontend_Resume.pdf";
 
 import Headroom from "react-headroom";
-import Sun from "../assets/sun.svg";
-import Moon from "../assets/moon.svg";
+import Sun from "../../public/assets/sun.svg";
+import Moon from "../../public/assets/moon.svg";
 import { useState } from "react";
 
 const Header = ({ prevScrollPos }: { prevScrollPos: number }) => {
