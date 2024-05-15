@@ -5,7 +5,6 @@ import Aos from "aos";
 import Projects from "./components/Projects";
 import Services from "./components/Services";
 import AboutMe from "./components/AboutMe";
-import Talavin from "./ui/icons/Talavin";
 
 function App() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
