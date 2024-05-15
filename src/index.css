@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply overflow-x-hidden transition-all duration-500 bg-firefly text-onahau dark:bg-satinLinen dark:text-burntSienna;
+  @apply overflow-x-hidden transition-all font-semibold duration-500 bg-satinLinen text-zeus dark:bg-firefly dark:text-turquoise;
 }
 
 ::-webkit-scrollbar {
@@ -11,34 +11,28 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-firefly;
+  @apply bg-firefly/20 dark:bg-cream/20 my-1;
 }
-/* border: 3px solid var(--navy) */
 
 ::-webkit-scrollbar-thumb {
-  @apply border-2 bg-onahau/50 border-firefly bg-clip-padding;
+  @apply border-2 bg-firefly/40 border-zeus dark:bg-cream/40 bg-clip-padding;
 }
 
 ::-webkit-scrollbar-button:decrement {
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-bottom: 4px solid rgba(204, 214, 246, 0.5);
+  border-bottom: 8px solid rgb(9 27 40 / 0.8);
 }
 
 ::-webkit-scrollbar-button:increment {
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: 4px solid rgba(204, 214, 246, 0.5);
+  border-top: 8px solid rgb(9 27 40 / 0.8);
 }
 
 ::selection {
   background-color: rgba(48, 191, 179, 0.1);
 }
-
-/* .Typewriter {
-  display: flex;
-  align-items: center;
-} */
 
 .techStackDetails:hover {
   scale: 1.25;
@@ -54,4 +48,28 @@ body {
 .techStackDetails:hover + .techStackDetails > span,
 .techStackDetails:has(+ .techStackDetails:hover) > span {
   @apply text-[10px] -top-[2rem] scale-100;
+}
+
+@layer utilities {
+  .techStackShadow {
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.2),
+      5px -5px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* .svgClass.grayscale {
+  filter: grayscale(100%);
+}
+.svgClass.contrast {
+  filter: contrast(160%);
+}
+.svgClass.brightness {
+  filter: brightness(0.25);
+}
+.svgClass.invert {
+  filter: invert(100%);
+} */
+
+#svgClass {
+  fill: "red";
 }

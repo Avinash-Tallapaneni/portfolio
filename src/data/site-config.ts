@@ -7,7 +7,7 @@ export type NavLink = {
   href: string;
 };
 export type Hero = {
-  greeting: string;
+  motto: string;
   name: string;
   expertise: string;
   content: string;
@@ -49,15 +49,7 @@ export const techStackDetails: TechStack[] = [
     },
     description: "Next.js is a react framework for building web apps",
   },
-  {
-    name: "Tailwind CSS",
-    image: {
-      src: "/assets/tailwind.svg",
-      alt: "Tailwind CSS Logo",
-    },
-    description:
-      "Tailwind is a utility-first CSS framework that lets you focus on your content.",
-  },
+
   {
     name: "React",
     image: {
@@ -91,6 +83,15 @@ export const techStackDetails: TechStack[] = [
     description: "MongoDB is a powerful NoSQL database",
   },
   {
+    name: "Tailwind CSS",
+    image: {
+      src: "/assets/tailwind.svg",
+      alt: "Tailwind CSS Logo",
+    },
+    description:
+      "Tailwind is a utility-first CSS framework that lets you focus on your content.",
+  },
+  {
     name: "Prisma",
     image: {
       src: "/assets/prisma.svg",
@@ -98,6 +99,15 @@ export const techStackDetails: TechStack[] = [
     },
     description:
       "Prisma is a Node.js & TypeScript ORM which provides global database caching, connection pooling, and real-time database events.",
+  },
+  {
+    name: "Supabase",
+    image: {
+      src: "/assets/supabase.svg",
+      alt: "Supabase Logo",
+    },
+    description:
+      "Supabase is an open-source Firebase alternative. It provides a realtime REST API and dashboard for building modern apps.",
   },
   {
     name: "Framer",
@@ -135,20 +145,20 @@ export const siteConfig: Siteconfig = {
   headerNavLinks: [
     {
       text: "Home",
-      href: "/",
+      href: "#",
     },
     {
       text: "About",
-      href: "/about",
+      href: "#about",
     },
     {
       text: "Projects",
-      href: "/projects",
+      href: "#projects",
     },
   ],
   hero: {
-    greeting: "Nice to meet you!",
-    name: "Avinash Tallapaneni.",
+    motto: "Empowering Brands through Compelling Visual Narratives",
+    name: "Avinash Tallapaneni",
     expertise: "Software Engineer | Frontend Developer | No Code Developer",
     content:
       "I specialize in building exceptional digital experiences that are not only visually appealing but also highly functional and accessible. With a keen eye for design and a passion for coding, I bring creativity and technical expertise to every project I work on.",

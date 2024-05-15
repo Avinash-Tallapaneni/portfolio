@@ -1,51 +1,67 @@
 import { techStackDetails } from "../data/site-config";
+import Typewriter from "typewriter-effect";
+import TextHighLight from "../shared/TextHighLight";
+import SectionTitle from "../shared/SectionTitle";
 
 const AboutMe = () => {
   return (
-    <section className="flex flex-col w-full gap-4 mx-auto mb-20 max-w-7xl z-100 ">
-      <div className="flex items-center justify-start w-full gap-4">
-        <div className="text-4xl text-transparent uppercase select-none text-nowrap bg-gradient-to-r from-turquoise to-turquoise/50 text-clip bg-clip-text dancing-font">
-          About Me
-        </div>
-        <span className="select-none w-full h-[1px] bg-gradient-to-r from-turquoise to-firefly"></span>
-      </div>
-      <div className="flex items-center justify-center w-full h-full gap-20 mt-12">
-        <div className="flex flex-col max-w-2xl gap-4 text-lg">
-          <p>
-            I'm a seasoned web developer with a passion for crafting exceptional
-            user experiences. My focus is on building clean, intuitive, and
-            engaging web interfaces that resonate with users.
-          </p>
+    <section
+      id="about"
+      className="flex flex-col w-full max-w-6xl gap-4 mx-auto mb-20 font-normal z-100 "
+    >
+      <SectionTitle message="About Me" />
+
+      <div className="flex items-center justify-start w-full h-full gap-20 mt-6">
+        <div className="flex flex-col max-w-2xl gap-4 text-lg text-justify">
+          <div className="flex items-center gap-2">
+            <span className="text-nowrap">I'm a seasoned</span>
+            <span className="flex items-end justify-between gap-1 px-4 py-1 font-semibold rounded-md text-nowrap shadow-typeWriter bg-gradient-to-b from-zeus/5 to-zeus/10 bg-cream w-fit text-zeus dark:from-firefly/5 dark:to-firefly/10 dark:bg-firefly/5 dark:text-turquoise">
+              <span> {"{"} </span>
+              <Typewriter
+                options={{
+                  strings: [
+                    "Software Engineer",
+                    "Frontend Developer",
+                    "No Code Developer",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+              <span> {"}"} </span>
+            </span>
+          </div>
+          <span>
+            with a love for creating outstanding user experiences. My goal is to
+            create
+            <TextHighLight message="user-friendly," />
+            &nbsp;
+            <TextHighLight message="aesthetically pleasing" />
+            &nbsp; and &nbsp;
+            <TextHighLight message="captivating web" /> interfaces.
+          </span>
 
           <p>
             Thriving in the fast-paced environment of{" "}
-            <span className="inline-block capitalize cursor-pointer text-turquoise group ">
-              {" "}
-              startups{" "}
-              <span className=" max-w-0 block group-hover:max-w-full transition-all duration-100 h-[0.25px] bg-turquoise"></span>
-            </span>
-            , I contribute across all stages of development. I'm a constant
-            learner, staying updated with the latest frameworks and
-            technologies. This enthusiasm fuels my desire to implement
-            innovative solutions for the projects I work on.
+            <TextHighLight message="startup" />
+            and contribute at every level of growth. I always keep up with the
+            newest frameworks and technologies because I'm a lifelong learner.
+            This excitement motivates me to apply creative solutions for the
+            tasks I do.
           </p>
-
           <span>
-            Working in a startup allows me to wear many hats. I collaborate
-            closely with the team, tackling challenges from concept and design
-            all the way to launch and beyond. Beyond the code, I value clear
-            communication and collaboration. I believe in working alongside
-            designers, product managers, and stakeholders to ensure a successful
-            final product.
+            I take on multiple roles at a startup, working closely with teams
+            from idea to launch. In order to successfully develop products, I
+            value collaboration, open communication, and working with product
+            managers, designers, and stakeholders.
           </span>
-
-          <div className="flex flex-col items-start justify-between gap-4 pb-4 mt-8">
+          <div className="flex flex-col items-start justify-between gap-4 pb-4 mt-4">
             {" "}
-            <span className="text-sm text-turquoise">
+            <span className="">
               {" "}
-              Some of the technologies i worked with{" "}
+              Here are a few technologies I've been working with recently:
             </span>
-            <div className="flex items-center  gap-2 p-2  rounded-lg ring-1 w-fit shadow-[ box-shadow:rgba(255, 255, 255, 0.17) 0px 0px 0px 1px inset]">
+            <div className="flex items-center  gap-2 p-2  rounded-lg ring-1 ring-zeus/40 dark:ring-turquoise/40  w-fit shadow-[ box-shadow:rgba(255, 255, 255, 0.17) 0px 0px 0px 1px inset]">
               {techStackDetails.map((stack) => {
                 if (stack.name.toLowerCase() !== "stripe") {
                   return (
@@ -59,9 +75,9 @@ const AboutMe = () => {
                         className="object-contain w-full h-full"
                       />
 
-                      <span className="absolute z-10 px-2 py-1 mx-1 text-sm font-bold scale-0 rounded-md group-hover:scale-100 text-firefly bg-turquoise -top-12 text-nowrap ">
+                      <span className="absolute z-10 px-2 py-1 mx-1 text-sm font-normal scale-0 rounded-md group-hover:scale-100 text-cream bg-zeus dark:text-firefly dark:bg-turquoise -top-12 text-nowrap ">
                         {stack.name}
-                        <span className="absolute w-2 h-2 rotate-45 -translate-x-1/2 -bottom-[0.125rem] -z-10 left-1/2 bg-turquoise"></span>
+                        <span className="absolute w-2 h-2 rotate-45 -translate-x-1/2 -bottom-[0.125rem] -z-10 left-1/2 bg-zeus dark:bg-turquoise"></span>
                       </span>
                     </div>
                   );
@@ -70,18 +86,17 @@ const AboutMe = () => {
             </div>
           </div>
         </div>
-        <div className="rounded-md overflow-hidden   w-[25rem] ">
-          <div className="relative w-full h-full">
+        <div className="rounded-md relative w-[20rem] ">
+          <div className="w-full h-full overflow-hidden ">
             <img
               src="/assets/me_bgRemoved.png"
               alt=""
-              className="object-contain w-full h-full pointer-events-none"
+              className="object-contain w-full h-full border-2 rounded-md pointer-events-none bg-cream border-zeus/60 dark:border-turquoise "
             />
-            {/* <span className="absolute top-0 left-0 w-full h-full opacity-25 cursor-pointer bg-turquoise hover:opacity-0 "></span> */}
           </div>
+          <span className="absolute w-[99%] h-[99%] bg-transparent -z-10 inset-4 rounded-md border-2 border-zeus/60 dark:border-turquoise "></span>
         </div>
       </div>
-
     </section>
   );
 };

@@ -11,9 +11,11 @@ const ProjectCard = ({
   const { url, image, title, description, techStack } = project;
   const [isHovered, setIsHovered] = useState(false);
 
+  const newURL = new URL(url);
+
   return (
     <div
-      className="z-30 flex-grow p-2 text-white rounded-md select-none shadow-card project bg-firefly/50 ring-2 ring-border"
+      className="z-30 flex-grow p-2 rounded-md shadow-md select-none project bg-zeus/10 dark:bg-turquoise/10 ring-1 ring-zeus/40 dark:ring-turquoise/40"
       data-aos="fade-up"
       data-aos-easing="linear"
       data-aos-delay={200 + 100 * (index + 1)}
@@ -26,30 +28,30 @@ const ProjectCard = ({
         className="flex flex-col items-center justify-between h-full gap-2"
       >
         <div className="flex items-center justify-between w-full gap-4 ">
-          <div className="flex items-center justify-between gap-2 max-w-12">
+          <div className="flex items-center justify-between gap-1 max-w-12">
             <div
               className={` w-2 h-2 rounded-full ${
-                isHovered ? "bg-red-400" : "bg-turquoise/50"
+                isHovered ? "bg-red-400" : "bg-zeus/50"
               }`}
             ></div>
             <div
               className={` w-2 h-2 rounded-full ${
-                isHovered ? "bg-yellow-400" : "bg-turquoise/50"
+                isHovered ? "bg-yellow-400" : "bg-zeus/50"
               }`}
             ></div>
             <div
               className={` w-2 h-2 rounded-full ${
-                isHovered ? "bg-green-400" : "bg-turquoise/50"
+                isHovered ? "bg-green-400" : "bg-zeus/50"
               }`}
             ></div>
           </div>
-          <div className="flex items-center justify-center flex-1 px-4 py-1 text-sm rounded-md text-nowrap bg-turquoise/10">
-            <span>{url}</span>
+          <div className="flex items-center justify-center flex-1 px-4 py-1 text-sm rounded-md text-nowrap bg-zeus/10 dark:bg-turquoise/10">
+            <span>{newURL.hostname}</span>
           </div>
 
           <div className="flex items-center justify-end ">
             <svg
-              className={` ${isHovered ? "text-turquoise" : " text-onahau"}`}
+              className={` ${isHovered ? "text-turquoise" : " text-zeus"}`}
               width="18"
               height="18"
               viewBox="0 0 18 18"
@@ -66,7 +68,7 @@ const ProjectCard = ({
           </div>
         </div>
 
-        <div className=" w-full h-full overflow-hidden flex-1 max-h-[25rem] mt-2">
+        <div className=" w-full h-full overflow-hidden flex-1 max-h-[25rem] mt-0">
           <img
             src={image.src}
             alt={image.alt}
@@ -75,20 +77,20 @@ const ProjectCard = ({
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="text-xl text-turquoise/80">
+          <h3 className="text-xl text-zeus/80 dark:text-turquoise/80">
             {title.split(":").map((titleSplit, index) => {
               return (
-                <>
+                <span key={index}>
                   {index === 0 ? (
                     <span className="font-bold">{titleSplit} : </span>
                   ) : (
                     <span className="text-lg ">{titleSplit}</span>
                   )}
-                </>
+                </span>
               );
             })}{" "}
           </h3>
-          <div className="text-sm text-onahau">
+          <div className="text-sm">
             <p>{description}</p>
           </div>
           <div className="flex items-center justify-start gap-3 my-2">
@@ -98,20 +100,22 @@ const ProjectCard = ({
               );
               if (techDetails) {
                 return (
-                  <div className="relative group">
+                  <div className="relative group" key={techDetails.name}>
                     <img
                       key={techDetails.name}
                       src={techDetails.image.src}
                       alt={techDetails.image.alt}
-                      className="object-cover w-8 h-8 p-1 rounded-md ring-1 ring-turquoise/50 "
+                      className="object-cover w-8 h-8 p-1 rounded-md ring-1 ring-zeus/40 dark:ring-turquoise/40"
                     />
 
-                    <div className="absolute flex flex-col px-4 py-2 mb-4 font-semibold scale-0 -translate-x-1/2 rounded-md opacity-0 group-hover:scale-100 group-hover:opacity-100 bg-turquoise text-firefly bottom-full left-1/2 w-52 ">
-                      <span className="text-lg">{techDetails.name}</span>
-                      <span className="text-sm font-semibold ">
-                        {techDetails.description}
-                      </span>
-                      <span className="absolute w-6 h-6 transform rotate-45 -translate-x-1/2 bg-turquoise -z-10 left-1/2 -bottom-1"></span>
+                    <div className="absolute scale-0 left-1/2 bottom-full group-hover:scale-100 bg-cream text-zeus ">
+                      <div className="absolute z-10 flex flex-col px-4 py-2 mb-2 font-semibold -translate-x-1/2 rounded-md techStackShadow bottom-full bg-cream w-52">
+                        <span className="text-lg ">{techDetails.name}</span>
+                        <span className="text-sm font-semibold ">
+                          {techDetails.description}
+                        </span>
+                      </div>
+                      <span className="absolute z-0 w-6 h-6 transform rotate-45 -translate-x-1/2 bg-cream left-1/2 -bottom-0"></span>
                     </div>
                   </div>
                 );

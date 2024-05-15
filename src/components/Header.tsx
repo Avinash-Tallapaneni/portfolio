@@ -1,25 +1,26 @@
 import { siteConfig } from "../data/site-config";
 import "aos/dist/aos.css";
 
-import Resume from "/assets/Avinash_Tallapaneni_Frontend_Resume.pdf"
+import Resume from "/assets/Avinash_Tallapaneni_Frontend_Resume.pdf";
 
 import Headroom from "react-headroom";
 import Sun from "/assets/sun.svg";
 import Moon from "/assets/moon.svg";
-import { useState } from "react";
+import Talavin from "../ui/icons/Talavin";
 
-const Header = ({ prevScrollPos }: { prevScrollPos: number }) => {
+interface HeaderProps {
+  prevScrollPos: number;
+  handleThemeToggle: () => void;
+  theme: string;
+}
+
+const Header = ({ prevScrollPos, handleThemeToggle, theme }: HeaderProps) => {
   const shouldShowNavbar = prevScrollPos > 10;
 
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
-
-  const handleToggle = () => {
-    document.documentElement.classList.toggle("dark");
-
-    if (theme === "dark") {
-      setTheme("light");
-    } else {
-      setTheme("dark");
+  const scrollToSection = (href: string) => {
+    const section = document.querySelector(href);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -31,40 +32,45 @@ const Header = ({ prevScrollPos }: { prevScrollPos: number }) => {
         width: "100%",
         margin: "auto",
         // padding: "1rem",
-        backgroundColor: theme === "dark" ? "#091B28" : "#EAE7DC",
+        backgroundColor: theme === "dark" ? "#091B28" : "#FFFAF5",
         boxShadow: shouldShowNavbar
-          ? "0 1px 40px -15px  rgba(143, 215, 188, 0.3)"
+          ? theme === "dark"
+            ? "0 1px 40px -15px  rgba(56, 223, 186, 0.2)"
+            : "0 1px 40px -15px  rgba(9, 27, 40, 0.2)"
           : "",
         transition: "all .5s ease-in-out",
       }}
     >
       <div
-        className={`w-full lg:max-w-7xl md:max-w-4xl   m-auto flex  items-center justify-between pt-8 py-4  `}
+        className={`w-full lg:max-w-6xl md:max-w-4xl   m-auto flex  items-center justify-between pt-8 py-4  `}
       >
-        {/* <img
-          src={siteConfig.logo.src}
-          className="w-12 h-12"
-          alt={siteConfig.logo.alt}
-        /> */}
-        <span className="text-4xl font-Dancing-Script text-turquoise text-nowrap dark:text-burntSienna">
-          Tal Avin
-        </span>
+        <div className="flex items-center justify-between gap-2">
+          <Talavin
+            fill={theme === "dark" ? "#38DFBA" : "#1C1816"}
+            className="w-12 h-12"
+          />
+
+          <span className="text-3xl text-zeus dark:text-turquoise">
+            TalAvin
+          </span>
+        </div>
 
         <nav className="items-center justify-between hidden md:flex">
           {siteConfig.headerNavLinks.map((link, index) => (
             <div
               key={link.text}
-              className="mx-4 font-mono cursor-pointer text-turquoise dark:text-burntSienna group"
+              className="mx-4 font-bold cursor-pointer text-zeus dark:text-turquoise group"
               data-aos="fade-down"
               data-aos-easing="linear"
               data-aos-delay={100 + 100 * (index + 1)}
+              onClick={() => scrollToSection(link.href)}
             >
               {link.text}
-              <span className=" max-w-0 block group-hover:max-w-full transition-all duration-500 h-[0.25px] bg-turquoise dark:bg-burntSienna"></span>
+              <span className=" max-w-0 block group-hover:max-w-full transition-all duration-500 h-[0.25px] bg-firefly dark:bg-turquoise"></span>
             </div>
           ))}
           <div
-            className="px-4 py-2 mx-4 transition-colors duration-500 rounded-md cursor-pointer ring-1 ring-turquoise text-turquoise hover:bg-turquoise/15 dark:ring-burntSienna dark:text-burntSienna dark:hover:bg-burntSienna/15"
+            className="px-4 py-2 mx-4 transition-colors duration-500 rounded-md cursor-pointer ring-1 ring-zeus text-zeus hover:bg-firefly hover:text-cream dark:ring-turquoise dark:text-turquoise dark:hover:bg-turquoise dark:hover:text-zeus"
             data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-delay="500"
@@ -74,10 +80,10 @@ const Header = ({ prevScrollPos }: { prevScrollPos: number }) => {
             </a>
           </div>
           <span
-            onClick={handleToggle}
+            onClick={handleThemeToggle}
             className="ml-2 leading-9 cursor-pointer"
           >
-            <img src={theme === "dark" ? Sun : Moon} alt="theme toggle" />
+            <img src={theme === "dark" ? Moon : Sun} alt="theme toggle" />
           </span>
         </nav>
       </div>
