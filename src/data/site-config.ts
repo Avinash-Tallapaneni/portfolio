@@ -155,6 +155,10 @@ export const siteConfig: Siteconfig = {
       text: "Projects",
       href: "#projects",
     },
+    {
+      text: "Services",
+      href: "#services",
+    },
   ],
   hero: {
     motto: "Empowering Brands through Compelling Visual Narratives",
@@ -191,6 +195,15 @@ export const siteConfig: Siteconfig = {
       title: "Web Design",
       description:
         "Crafting visually stunning, user-friendly interfaces with Figma, Framer, and Webflow, including wireframes and high-fidelity prototypes.",
+    },
+    {
+      image: {
+        src: "/assets/frontend.svg",
+        alt: "React Native Development Image",
+      },
+      title: "React Native Development",
+      description:
+        "Cross-platform mobile apps with native performance. Sleek, intuitive interfaces. Robust, scalable code.",
     },
   ],
 

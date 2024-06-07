@@ -1,8 +1,7 @@
-
 const Doodle = ({
   fill,
-  width = "40",
-  height = "40",
+  width = "120",
+  height = "120",
   className,
 }: {
   fill: string;
@@ -20,7 +19,7 @@ const Doodle = ({
     >
       <title>doodle</title>
       <desc>A visual representation of the doodle</desc>
-      <g clip-path="url(#clip0_103_7079)"  >
+      <g clip-path="url(#clip0_103_7079)">
         <path
           d="M93.6699 12.2681C94.9032 13.2851 96.5261 14.6699 97.7161 15.7302C94.4056 12.636 86.9838 13.9342 76.338 20.339C76.338 20.339 76.3164 20.339 76.3164 20.3174C85.2095 12.8523 91.2032 10.3207 93.6699 12.2681Z"
           fill={fill}
@@ -580,11 +579,6 @@ const Doodle = ({
           fill-opacity="0.1"
         />
       </g>
-      {/* <defs>
-        <clipPath id="clip0_103_7079">
-          <rect width="116" height="116" fill="white" />
-        </clipPath>
-      </defs> */}
     </svg>
   );
 };

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply overflow-x-hidden transition-all font-semibold duration-500 bg-satinLinen text-zeus dark:bg-firefly dark:text-turquoise;
+  @apply overflow-x-hidden font-Kode transition-all font-semibold duration-500 bg-cream text-zeus dark:bg-firefly dark:text-turquoise;
 }
 
 ::-webkit-scrollbar {

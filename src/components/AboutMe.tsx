@@ -7,13 +7,13 @@ const AboutMe = () => {
   return (
     <section
       id="about"
-      className="flex flex-col w-full max-w-6xl gap-4 mx-auto mb-20 font-normal z-100 "
+      className="flex flex-col items-center justify-start flex-grow w-full h-full max-w-6xl gap-4 px-8 py-4 mx-auto mb-10 font-normal md:items-start xl:px-0 md:py-14 "
     >
       <SectionTitle message="About Me" />
 
-      <div className="flex items-center justify-start w-full h-full gap-20 mt-6">
-        <div className="flex flex-col max-w-2xl gap-4 text-lg text-justify">
-          <div className="flex items-center gap-2">
+      <div className="flex justify-center w-full h-full mx-auto mt-6 lg:justify-between lg:items-center md:items-start lg:max-w-6xl md:max-w-4xl sm:px-20 md:p-0 ">
+        <div className="flex flex-col w-full gap-4 text-lg lg:max-w-2xl ">
+          <div className="flex flex-col items-center gap-2 md:flex-row">
             <span className="text-nowrap">I'm a seasoned</span>
             <span className="flex items-end justify-between gap-1 px-4 py-1 font-semibold rounded-md text-nowrap shadow-typeWriter bg-gradient-to-b from-zeus/5 to-zeus/10 bg-cream w-fit text-zeus dark:from-firefly/5 dark:to-firefly/10 dark:bg-firefly/5 dark:text-turquoise">
               <span> {"{"} </span>
@@ -33,7 +33,7 @@ const AboutMe = () => {
           </div>
           <span>
             with a love for creating outstanding user experiences. My goal is to
-            create
+            create &nbsp;
             <TextHighLight message="user-friendly," />
             &nbsp;
             <TextHighLight message="aesthetically pleasing" />
@@ -61,13 +61,13 @@ const AboutMe = () => {
               {" "}
               Here are a few technologies I've been working with recently:
             </span>
-            <div className="flex items-center  gap-2 p-2  rounded-lg ring-1 ring-zeus/40 dark:ring-turquoise/40  w-fit shadow-[ box-shadow:rgba(255, 255, 255, 0.17) 0px 0px 0px 1px inset]">
+            <div className="flex items-center flex-wrap  gap-2 p-2 mx-auto my-4  lg:m-0   rounded-lg ring-1 ring-zeus/40 dark:ring-turquoise/40  w-fit shadow-[ box-shadow:rgba(255, 255, 255, 0.17) 0px 0px 0px 1px inset]">
               {techStackDetails.map((stack) => {
                 if (stack.name.toLowerCase() !== "stripe") {
                   return (
                     <div
                       key={stack.name}
-                      className="relative flex flex-col items-center w-12 h-12 p-0 transition-all rounded-md cursor-pointer group techStackDetails "
+                      className="relative flex flex-col items-center w-6 h-6 p-0 transition-all rounded-md cursor-pointer lg:w-12 lg:h-12 group techStackDetails "
                     >
                       <img
                         src={stack.image.src}
@@ -86,7 +86,7 @@ const AboutMe = () => {
             </div>
           </div>
         </div>
-        <div className="rounded-md relative w-[20rem] ">
+        <div className="rounded-md relative  lg:w-[20rem]  md:w-[12rem] hidden lg:block ">
           <div className="w-full h-full overflow-hidden ">
             <img
               src="/assets/me_bgRemoved.png"

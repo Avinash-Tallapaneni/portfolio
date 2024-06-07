@@ -15,7 +15,7 @@ const ProjectCard = ({
 
   return (
     <div
-      className="z-30 flex-grow p-2 rounded-md shadow-md select-none project bg-zeus/10 dark:bg-turquoise/10 ring-1 ring-zeus/40 dark:ring-turquoise/40"
+      className="flex-grow p-2 rounded-md shadow-md select-none project bg-zeus/10 dark:bg-turquoise/10 ring-1 ring-zeus/40 dark:ring-turquoise/40"
       data-aos="fade-up"
       data-aos-easing="linear"
       data-aos-delay={200 + 100 * (index + 1)}
@@ -45,7 +45,7 @@ const ProjectCard = ({
               }`}
             ></div>
           </div>
-          <div className="flex items-center justify-center flex-1 px-4 py-1 text-sm rounded-md text-nowrap bg-zeus/10 dark:bg-turquoise/10">
+          <div className="flex items-center justify-center flex-1 px-4 py-1 text-[0.75rem] md:text-sm rounded-md text-nowrap bg-zeus/10 dark:bg-turquoise/10">
             <span>{newURL.hostname}</span>
           </div>
 

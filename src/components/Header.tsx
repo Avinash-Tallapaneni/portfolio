@@ -32,7 +32,7 @@ const Header = ({ prevScrollPos, handleThemeToggle, theme }: HeaderProps) => {
         width: "100%",
         margin: "auto",
         // padding: "1rem",
-        backgroundColor: theme === "dark" ? "#091B28" : "#FFFAF5",
+        backgroundColor: theme === "dark" ? "#091B28" : "#F1F0EF",
         boxShadow: shouldShowNavbar
           ? theme === "dark"
             ? "0 1px 40px -15px  rgba(56, 223, 186, 0.2)"
@@ -42,15 +42,15 @@ const Header = ({ prevScrollPos, handleThemeToggle, theme }: HeaderProps) => {
       }}
     >
       <div
-        className={`w-full lg:max-w-6xl md:max-w-4xl   m-auto flex  items-center justify-between pt-8 py-4  `}
+        className={`w-full lg:max-w-6xl md:max-w-4xl max-w-2xl px-8  xl:px-0  m-auto flex  items-center justify-between py-4  `}
       >
         <div className="flex items-center justify-between gap-2">
           <Talavin
-            fill={theme === "dark" ? "#38DFBA" : "#1C1816"}
-            className="w-12 h-12"
+            fill={theme === "dark" ? "#38DFBA" : "#151632"}
+            className="w-8 h-8 lg:w-12 lg:h-12 "
           />
 
-          <span className="text-3xl text-zeus dark:text-turquoise">
+          <span className="text-lg md:text-2xl lg:text-3xl text-zeus dark:text-turquoise">
             TalAvin
           </span>
         </div>

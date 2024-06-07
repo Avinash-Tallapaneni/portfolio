@@ -4,7 +4,7 @@ interface TextHighLightProp {
 
 const TextHighLight = ({ message }: TextHighLightProp) => {
   return (
-    <span className="inline-block font-semibold cursor-pointer group ">
+    <span className="inline-block font-extrabold cursor-pointer text-turquoise group ">
       {message}
       &nbsp;
       <span className=" max-w-0 block group-hover:max-w-full transition-all duration-700 h-[0.25px] bg-turquoise"></span>

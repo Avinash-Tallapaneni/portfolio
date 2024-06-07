@@ -5,6 +5,7 @@ import Aos from "aos";
 import Projects from "./components/Projects";
 import Services from "./components/Services";
 import AboutMe from "./components/AboutMe";
+import { Footer } from "./components/Footer";
 
 function App() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -96,6 +97,7 @@ function App() {
         <AboutMe />
         <Services />
         <Projects />
+        <Footer theme={theme} />
 
         {position.x > 0 && position.y > 0 && (
           <div
