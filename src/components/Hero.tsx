@@ -54,7 +54,7 @@ const Hero = ({ theme }: { theme: string }) => {
             className="absolute w-8 h-8 -top-6 -right-6"
           />
           <div className="skew-12 select-none absolute inset-0 flex h-full w-full translate-x-[-110%] transform  justify-center pointer-events-none group-hover:translate-x-[100%] group-hover:duration-1000">
-            <div className="relative w-8 h-full bg-cream/20"></div>
+            <div className="relative w-8 h-full bg-cream/20 dark:bg-firefly/20"></div>
           </div>
         </div>
 

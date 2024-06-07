@@ -32,7 +32,7 @@ const Header = ({ prevScrollPos, handleThemeToggle, theme }: HeaderProps) => {
         width: "100%",
         margin: "auto",
         // padding: "1rem",
-        backgroundColor: theme === "dark" ? "#091B28" : "#F1F0EF",
+        backgroundColor: theme === "dark" ? "#151632" : "#F1F0EF",
         boxShadow: shouldShowNavbar
           ? theme === "dark"
             ? "0 1px 40px -15px  rgba(56, 223, 186, 0.2)"

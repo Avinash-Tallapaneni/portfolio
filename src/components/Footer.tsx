@@ -71,24 +71,25 @@ export const Footer = ({ theme }: { theme: string }) => {
             Let's Talk about Your Project!
           </p>
           <p className=" text-slate-500">
-            It's <span className="text-black">{localTime}</span>, Something on
-            your mind? Get in touch &amp; let's discuss over a coffee!!
+            It's <span className="font-extrabold  text-turquoise">{localTime}</span>,
+            Something on your mind? Get in touch &amp; let's discuss over a
+            coffee!!
           </p>
         </div>
         <div className="flex flex-col items-center justify-center w-full gap-4 md:flex-row ">
           <button
-            className="relative px-10 py-3 text-sm uppercase transition-all duration-200 border-2 rounded-md w-[15rem] bg-zeus group text-cream border-zeus md:w-auto md:text-base "
+            className="relative px-10 py-3 text-sm uppercase transition-all duration-200 border-2 rounded-md w-[15rem] bg-zeus dark:bg-turquoise dark:text-zeus font-bold group text-cream border-zeus md:w-auto md:text-base "
             data-cal-link="tallavin/30min"
             data-cal-config='{"layout":"month_view"}'
           >
             Schedule a call
             <div className="skew-12 absolute inset-0 flex h-full w-full translate-x-[-110%] transform justify-center group-hover:translate-x-[100%] group-hover:duration-1000">
-              <div className="relative w-8 h-full bg-cream/20"></div>
+              <div className="relative w-8 h-full bg-cream/20 dark:bg-firefly/20"></div>
             </div>
           </button>
           <a
             href="mailto:avinashtallapaneni@gmail.com"
-            className="group relative flex items-center justify-center gap-2 overflow-hidden rounded bg-cream text-zeus border-2 border-zeus active:scale-[.95] w-[15rem] px-10 py-3 text-sm  uppercase md:w-auto md:text-base"
+            className="group relative flex items-center justify-center gap-2 overflow-hidden rounded bg-cream text-zeus border-2 border-zeus font-bold active:scale-[.95] w-[15rem] px-10 py-3 text-sm  uppercase md:w-auto md:text-base"
             aria-label="Mail"
           >
             <Email
@@ -97,7 +98,7 @@ export const Footer = ({ theme }: { theme: string }) => {
             />
             <span>Send an mail</span>
             <div className="skew-12 absolute inset-0 flex h-full w-full translate-x-[-110%] transform justify-center group-hover:translate-x-[100%] group-hover:duration-1000">
-              <div className="relative w-8 h-full bg-zeus/20"></div>
+              <div className="relative w-8 h-full bg-zeus/20 dark:bg-firefly/20"></div>
             </div>
           </a>
         </div>

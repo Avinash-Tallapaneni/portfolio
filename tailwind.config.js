@@ -36,15 +36,10 @@ export default {
         Kode: ["Kode Mono", "monospace"],
       },
       colors: {
-        firefly: "#091B28",
-        // cream: "#FFFAF5",
+        firefly: "#151632",
         cream: "#F1F0EF",
         zeus: "#151632",
         darkNavyGradient: "#005D70",
-        // darkNavy: "#040817",
-        // blue: "#01ABEE",
-        // blue: "#30c2b6",
-        // blue: "#22857B",
         turquoise: "#38DFBA",
       },
       boxShadow: {
