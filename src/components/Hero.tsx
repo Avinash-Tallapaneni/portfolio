@@ -16,9 +16,9 @@ const Hero = ({ theme }: { theme: string }) => {
 
   return (
     <main className="relative flex-grow w-full px-8 py-4 select-none xl:mb-10 m xl:px-0 md:py-8 text-zeus dark:text-turquoise ">
-      <div className="flex flex-col items-center h-full gap-4 mx-auto md:gap-10 lg:justify-start xl:gap-8 lg:items-start lg:max-w-6xl md:max-w-4xl sm:px-20 md:p-0 items-left ">
+      <div className="flex flex-col items-center h-full gap-4 mx-auto lg:justify-start lg:items-start lg:max-w-6xl md:max-w-4xl sm:px-20 md:p-0 items-left ">
         <h1
-          className="text-2xl tracking-widest md:leading-10 text-start md:text-center lg:text-start md:max-w-2xl lg:max-w-3xl md:text-5xl xl:text-6xl "
+          className="text-2xl tracking-widest text-start md:text-center lg:text-start md:max-w-2xl lg:max-w-3xl md:text-5xl xl:text-6xl "
           data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-delay="500"
@@ -28,7 +28,7 @@ const Hero = ({ theme }: { theme: string }) => {
 
         <div className="md:my-4">
           <p
-            className="max-w-2xl text-base tracking-widest md:text-center lg:text-start md:leading-10 md:text-xl text-zeus dark:text-turquoise/80"
+            className="max-w-2xl text-base tracking-widest md:text-center lg:text-start md:text-xl text-zeus dark:text-turquoise/80"
             data-aos="fade-up"
             data-aos-easing="linear"
             data-aos-delay="750"
