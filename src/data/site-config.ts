@@ -222,13 +222,24 @@ export const siteConfig: Siteconfig = {
     {
       url: "https://weather-warden.netlify.app/",
       image: {
-        src: "/assets/mountain.avif",
+        src: "/assets/weatherWarden.png",
         alt: "Weather Warden Image",
       },
       title: "Weather Warden: Your Personal Weather Companion",
       description:
         "Weather Warden is your go-to app for all your weather needs. Stay updated with real-time weather forecasts, radar maps, and personalized weather alerts. With Weather Warden, you'll always be prepared for whatever the weather brings.",
       techStack: ["react", "tailwind"],
+    },
+    {
+      url: "https://prioritymail.vercel.app/",
+      image: {
+        src: "/assets/prioritymail.png",
+        alt: "PriorityMail Image",
+      },
+      title: "PriorityMail: Organize Your Inbox with AI",
+      description:
+        "PriorityMail is a web application that prioritizes and tags your Gmail emails using the power of Gemini AI. Securely authenticate with Google using NextAuth, fetch and classify emails using Gmail API, and store API keys in local storage. Experience a smarter way to manage your inbox.",
+      techStack: ["Next.js", "TailwindCSS", "TypeScript"],
     },
   ],
 };
