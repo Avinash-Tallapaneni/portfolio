@@ -90,8 +90,8 @@ const ProjectCard = ({
               );
             })}{" "}
           </h3>
-          <div className="text-sm">
-            <p>{description}</p>
+          <div className="h-[7.5rem] text-sm truncate ">
+            <p className="whitespace-pre-wrap text-ellipsis ">{description}</p>
           </div>
           <div className="flex items-center justify-start gap-3 my-2">
             {techStack.map((tech) => {

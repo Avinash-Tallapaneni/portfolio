@@ -63,7 +63,7 @@ const AboutMe = () => {
             </span>
             <div className="flex items-center flex-wrap  gap-2 p-2 mx-auto my-4  lg:m-0   rounded-lg ring-1 ring-zeus/40 dark:ring-turquoise/40  w-fit shadow-[ box-shadow:rgba(255, 255, 255, 0.17) 0px 0px 0px 1px inset]">
               {techStackDetails.map((stack) => {
-                if (stack.name.toLowerCase() !== "stripe") {
+                if (stack.show) {
                   return (
                     <div
                       key={stack.name}
